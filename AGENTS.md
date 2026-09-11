@@ -29,16 +29,23 @@ Web application for daycare and nursery management, facilitating communication b
 ```text
 06-Daycareapp/
 ├── app/                  # Next.js App Router (pages, layouts, globals)
+│   ├── components/       # Modular UI components (e.g., feed/)
+│   ├── data/             # Mock and static datasets
+│   ├── types/            # Shared TypeScript domain types
 │   ├── layout.tsx        # Root layout (fonts, metadata, shell)
-│   ├── page.tsx          # Initial entry page
+│   ├── page.tsx          # Initial entry page (Home Feed)
 │   └── globals.css       # Tailwind CSS imports and theme tokens
 ├── public/               # Static public assets
 ├── references/           # Design mockups & visual specifications
 │   ├── pantallas/        # Prototype screens in HTML (*.dc.html)
 │   └── screenshots/      # Reference UI screenshots
+├── specs/                # Feature specs and acceptance criteria
+│   └── .spec-config.yml  # Spec workflow configuration
 ├── .agents/              # Agent tools, MCP configuration and skills
+│   ├── agents/           # Custom subagents (spec-verifier)
 │   ├── mcp_config.json   # MCP servers configuration (Playwright)
 │   └── skills/           # Custom agent skills (/spec, /spec-impl)
+├── .playwright-mcp/      # Playwright screenshots and test artifacts
 ├── AGENTS.md             # Project documentation & agent instructions
 └── package.json          # Dependencies and npm scripts
 ```
@@ -100,3 +107,5 @@ Consult these HTML prototypes before implementing components to match layout, co
 - **Agent Skills**:
   - `/spec`: Interactive spec-driven design before building new features.
   - `/spec-impl`: Implementation workflow guided by an approved spec.
+- **Subagents (`.agents/agents/`)**:
+  - `spec-verifier`: Subagente encargado de auditar y verificar criterios de aceptación en `specs/`, validando código, pruebas de compilación/linter y evidencia visual en `.playwright-mcp/`.
