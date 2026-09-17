@@ -1,6 +1,6 @@
 # SPEC 03 — Vistas de Autenticación (/auth/login y /auth/activate-account)
 
-> **Status:** Aproved
+> **Status:** Implemented
 > **Depends on:** SPEC 01
 > **Date:** 2026-09-17
 > **Objective:** Implementar las vistas estáticas de inicio de sesión (/auth/login) y activación de cuenta (/auth/activate-account) a partir de `references/pantallas/login.dc.html` y `references/pantallas/activar-cuenta.dc.html`, omitiendo el selector de rol (Personal/Familia) y preparando la interfaz visual para su posterior integración funcional.
@@ -105,19 +105,19 @@ export const mockInvitationContext: ChildInvitationContext = {
 
 ## Acceptance criteria
 
-- [ ] La ruta `/auth/login` existe y renderiza correctamente la vista de inicio de sesión inspirada en `login.dc.html`.
-- [ ] En `/auth/login`, el panel lateral ilustrativo muestra el gradiente, eslogan, logo OpenDayCare y mención a la sala.
-- [ ] En `/auth/login`, **no se muestra** la sección ni los botones "INGRESO COMO" (Personal / Familia).
-- [ ] En `/auth/login`, el botón "Iniciar sesión" enlaza a la ruta principal `/`.
-- [ ] En `/auth/login`, el enlace "Activá tu cuenta" apunta a `/auth/activate-account`.
-- [ ] La ruta `/auth/activate-account` existe y renderiza correctamente la vista de activación inspirada en `activar-cuenta.dc.html`.
-- [ ] En `/auth/activate-account`, se muestra la tarjeta de invitación con "Mateo · Sala Soles" y avatar con inicial "M".
-- [ ] En `/auth/activate-account`, los campos de código de invitación, email y contraseña se muestran vacíos con sus respectivos placeholders.
-- [ ] En `/auth/activate-account`, el checkbox de consentimiento de fotografías se muestra seleccionado/estilizado de forma visual con tilde verde.
-- [ ] En `/auth/activate-account`, el botón "Activar mi cuenta" enlaza a `/`.
-- [ ] En `/auth/activate-account`, el enlace "Iniciar sesión" apunta a `/auth/login`.
-- [ ] `npm run lint` pasa sin errores de linting.
-- [ ] `npm run build` compila la aplicación exitosamente sin errores de TypeScript ni rutas rotas.
+- [x] La ruta `/auth/login` existe y renderiza correctamente la vista de inicio de sesión inspirada en `login.dc.html`.
+- [x] En `/auth/login`, el panel lateral ilustrativo muestra el gradiente, eslogan, logo OpenDayCare y mención a la sala.
+- [x] En `/auth/login`, **no se muestra** la sección ni los botones "INGRESO COMO" (Personal / Familia).
+- [x] En `/auth/login`, el botón "Iniciar sesión" enlaza a la ruta principal `/`.
+- [x] En `/auth/login`, el enlace "Activá tu cuenta" apunta a `/auth/activate-account`.
+- [x] La ruta `/auth/activate-account` existe y renderiza correctamente la vista de activación inspirada en `activar-cuenta.dc.html`.
+- [x] En `/auth/activate-account`, se muestra la tarjeta de invitación con "Mateo · Sala Soles" y avatar con inicial "M".
+- [x] En `/auth/activate-account`, los campos de código de invitación, email y contraseña se muestran vacíos con sus respectivos placeholders.
+- [x] En `/auth/activate-account`, el checkbox de consentimiento de fotografías se muestra seleccionado/estilizado de forma visual con tilde verde.
+- [x] En `/auth/activate-account`, el botón "Activar mi cuenta" enlaza a `/`.
+- [x] En `/auth/activate-account`, el enlace "Iniciar sesión" apunta a `/auth/login`.
+- [x] `npm run lint` pasa sin errores de linting.
+- [x] `npm run build` compila la aplicación exitosamente sin errores de TypeScript ni rutas rotas.
 
 ---
 

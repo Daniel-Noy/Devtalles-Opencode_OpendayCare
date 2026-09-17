@@ -41,7 +41,7 @@ export function ActivateAccountForm({
       <InvitationInfoCard context={invitationContext} />
 
       {/* Form with empty inputs & placeholders */}
-      <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+      <form className="space-y-4">
         <div>
           <label
             htmlFor="invitationCode"
