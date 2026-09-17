@@ -94,8 +94,7 @@ In both cases the content follows the same order:
 
 **After each section (only in the section-by-section mode):**
 
-- Show it formatted in markdown.
-- Ask: "Does this section stay like this or do you want to tweak it?"
+- Show it formatted in markdown as an artefact to be previewed and confirmed by the user.
 - If the user requests changes, apply them and show again.
 - Only move to the next section once the user confirms.
 
