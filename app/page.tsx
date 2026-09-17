@@ -1,7 +1,7 @@
 import { FeedHeader } from "@/app/components/feed/feed-header";
 import { PostCard } from "@/app/components/feed/post-card";
 import { SharePromptCard } from "@/app/components/feed/share-prompt-card";
-import { Sidebar } from "@/app/components/feed/sidebar";
+import { Sidebar } from "@/app/components/shared/sidebar";
 import {
   mockEducatorProfile,
   mockFeedPosts,
@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen bg-[#F6ECDF]">
       {/* Barra lateral */}
-      <Sidebar educator={mockEducatorProfile} room={mockRoomInfo} />
+      <Sidebar educator={mockEducatorProfile} room={mockRoomInfo} activeNav="feed" />
 
       {/* Contenido principal del feed */}
       <main className="flex-1 min-w-0 h-screen overflow-y-auto">
